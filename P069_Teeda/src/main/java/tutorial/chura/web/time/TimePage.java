@@ -13,6 +13,7 @@ public class TimePage {
 	public String fa  = "aaa";
 	public String fa2 = "bbb";	//●こっちだと、HTMLの読み込み時にdddとでてくる。
 	//public String fa2;		//●こっちだと、HTML読み込み時はなにも表示されない。
+	public String fa3;			//javaScriptでvalueに入れたやつがこの変数に入ってくる。
 
 	public Class<?> doSubmit() {
 		

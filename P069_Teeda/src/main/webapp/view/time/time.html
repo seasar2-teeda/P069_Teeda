@@ -13,6 +13,7 @@
 		//●ここで入れてしまうこと。
 		document.getElementById("fa2").innerHTML = fa;
 		//●このあとPageクラスにいくと初期化されてしまっていた問題は、プログラムの処理の順番で上書きされていたのが原因だった。なのでPageクラス側に持っていくことで、とりあえず解決となった。
+		document.getElementById("fa3").value = fa;
 	}
 </script>
 
@@ -25,6 +26,7 @@
 	Prerendered Time:<span id="prerenderedTime"></span><br />
 	<input type="text" id="fa"/><br />
 	<span id = "fa2"></span><br />
+	<input type="text" id="fa3"/><br />
 	<input type="submit" id="doSubmit" value="submit" onclick="kougakuChk();"/>
 </form>
 
