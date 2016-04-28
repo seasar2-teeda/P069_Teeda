@@ -10,8 +10,15 @@ public class TimePage {
 	public Date initializedTime;
 	@DateTimeConverter(type = "time")
 	public Date prerenderedTime;
+	public String fa  = "aaa";
+	public String fa2 = "bbb";	//●こっちだと、HTMLの読み込み時にdddとでてくる。
+	//public String fa2;		//●こっちだと、HTML読み込み時はなにも表示されない。
 
 	public Class<?> doSubmit() {
+		
+		//html側でjavascriptで値を同期するのはあきらめた。こっちでやればいいだろ。
+		fa2 = fa;//●しかもこの処理「doSubmit()」を通らないと、代入が起こっていないのを発見できた。
+		
 		return null;
 	}
 

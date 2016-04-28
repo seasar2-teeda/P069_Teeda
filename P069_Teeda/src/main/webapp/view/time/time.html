@@ -1,11 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
+<head>
+<title>fa</title>
+
+<script language ="JavaScript">
+	function kougakuChk(){
+		var fa = document.getElementById("fa").value;
+		
+		//●この時点では「ddd」
+		//var fa2 = document.getElementById("fa2").innerHTML;
+		
+		//●ここで入れてしまうこと。
+		document.getElementById("fa2").innerHTML = fa;
+		//●このあとPageクラスにいくと初期化されてしまっていた問題は、プログラムの処理の順番で上書きされていたのが原因だった。なのでPageクラス側に持っていくことで、とりあえず解決となった。
+	}
+</script>
+
+</head>
 <body>
 
 <form id="form">
-<span id="allMessages"></span>
-Initialized Time:<span id="initializedTime"></span><br />
-Prerendered Time:<span id="prerenderedTime"></span><br />
-<input type="submit" id="doSubmit" value="submit"/>
+	<span id="allMessages"></span>
+	Initialized Time:<span id="initializedTime"></span><br />
+	Prerendered Time:<span id="prerenderedTime"></span><br />
+	<input type="text" id="fa"/><br />
+	<span id = "fa2"></span><br />
+	<input type="submit" id="doSubmit" value="submit" onclick="kougakuChk();"/>
 </form>
 
 </body>
